@@ -1,0 +1,8 @@
+pub fn themes(theme: String) -> Vec<u32> {
+    match theme.as_ref() {
+        "candy" => vec![0xffed38, 0x4f0093, 0xfb5607, 0x23f0c7, 0x256eff],
+        "ocean" => vec![0x2608a0, 0x091540, 0x7692ff, 0xabd2fa, 0x3d518c],
+        _ => vec![0x1f1f1f, 0xf81118,0xecba0f,0x2a84d2,
+                  0x4e5ab7, 0xd6dbe5, 0x1dd361, 0x0f7ddb]
+    }
+}

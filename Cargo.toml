@@ -1,0 +1,7 @@
+[workspace]
+members=[ "cadnano-format", "codenano-gui", "finiteelement_macros", "finiteelement", "nanostructure", "design" ]
+
+exclude = [ "server", "appuser" ]
+
+[profile.release]
+debug = true

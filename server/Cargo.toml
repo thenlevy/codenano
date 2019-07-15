@@ -1,0 +1,29 @@
+[package]
+name = "server"
+version = "0.1.0"
+authors = ["thenlevy <nicolaspierrelevy@gmail.com>", "pe@pijul.org <pierre-etienne.meunier@mu.ie>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/thenlevy/codenano"
+edition = "2018"
+
+[dependencies]
+hyper = "*"
+url = "*"
+hyper-static = { path = "../hyper-static" }
+env_logger = "*"
+futures = "*"
+httpdate = "*"
+clap = "*"
+tempfile = "*"
+tokio-threadpool = "*"
+failure = "*"
+serde_json = "*"
+design = { path = "../design" }
+cadnano-format = { path = "../cadnano-format" }
+base64 = "*"
+rand = "*"
+log = "*"
+
+# cookie = { version = "*", features = [ "secure" ] }
+# pleingres = "*"
+# uuid = "*"

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Codenano-wasm</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="toolbar">
+                <button id="compile">Compile</button>
+                <button id="relax">Relax</button>
+                <button id="stop">Stop</button>
+                <form style="display:inline" name="export" method="POST" action="/export-cadnano.json">
+                    <button id="export">Export to cadnano</button>
+                    <input type="hidden" name="text" id="text"/>
+                </form>
+            </div>
+            <div id="layout">
+                <div id="gl" class="split">
+                    <canvas id="glcanvas"></canvas>
+                </div>
+                <div id="editor" class="split">
+
+use design::*;
+
+
+pub fn main() {
+    let mut ori = Nanostructure::new();
+    let id_0 = ori.add_grid_helix(0, 0);
+    let id_1 = ori.add_grid_helix(1, 0);
+
+    ori.draw_strand(id_0, false, 0, 20, AUTO_COLOR);
+    ori.draw_strand(id_0, true, 0, 20, AUTO_COLOR);
+    ori.draw_strand(id_1, false, 0, 20, AUTO_COLOR);
+    ori.draw_strand(id_1, true, 0, 20, AUTO_COLOR);
+
+    ori.make_jump(ori.get_nucl(id_1, 11, false), ori.get_nucl(id_0, 11, true));
+    ori.make_jump(ori.get_nucl(id_0, 12, true), ori.get_nucl(id_1, 12, false));
+
+
+    ori.finish();
+}
+
+</div>
+            </div>
+    </body>
+    <script src="/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/split.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+     var phi = (1 + Math.sqrt(5))/2;
+     var layout = document.getElementById("layout");
+     var tbh = document.getElementById("toolbar").getBoundingClientRect().height;
+
+     layout.style.position = "absolute";
+     layout.style.width = "100%";
+     layout.style.height = "calc(100% - "+tbh+"px)";
+     layout.style.marginTop = tbh+"px";
+
+     window.Split(["#gl", "#editor"], {
+         sizes: [100 - 100/phi , 100 / phi],
+         direction: 'horizontal',
+     });
+     var editor = function () {
+         var editor = ace.edit("editor");
+         editor.setTheme("ace/theme/monokai");
+         editor.session.setMode("ace/mode/rust");
+         return editor
+     }
+     var set_canvas_dim = function (w, h) {
+         var canvas = document.getElementById("glcanvas");
+         canvas.style.width = w;
+         canvas.style.height = h;
+     }
+    </script>
+    <script src="/bootstrap.js"></script>
+</html>

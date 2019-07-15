@@ -1,0 +1,17 @@
+[package]
+name = "finiteelement"
+description = "A library to define and solve finite element systems"
+version = "0.1.0"
+authors = ["thenlevy <nicolaspierrelevy@gmail.com>", "pe@pijul.org <pierre-etienne.meunier@mu.ie>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/thenlevy/codenano"
+edition = "2018"
+
+[lib]
+name = "finiteelement"
+
+[dependencies]
+rand = "*"
+num-traits = "0.2.8"
+finiteelement_macros = { path = "../finiteelement_macros" }
+serde = { version = "1.0", features = ["derive"] }

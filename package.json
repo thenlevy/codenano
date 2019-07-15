@@ -1,0 +1,13 @@
+{
+  "name": "wasm_cadnano",
+  "collaborators": [
+    "Pierre-Étienne Meunier <pe@pijul.org>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "wasm_cadnano.wasm",
+    "wasm_cadnano.js"
+  ],
+  "module": "wasm_cadnano.js",
+  "sideEffects": "false"
+}

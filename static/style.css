@@ -1,0 +1,113 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 300 16px/1.7 'Open Sans', sans-serif;
+}
+.ace_scroller {
+    padding: 5px 0;
+}
+.ace_gutter {
+    padding: 5px 0;
+}
+#wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+#toolbar {
+    height: 30px;
+    margin: 0;
+    padding: 10px;
+    background-color:#eee;
+}
+#gl{
+    height: 100%;
+    overflow: hidden;
+}
+
+.form-radio
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+}
+.form-radio:checked::before
+{
+    position: absolute;
+    font: 13px/1 'Open Sans', sans-serif;
+    left: 11px;
+    top: 7px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+.form-radio:hover
+{
+    background-color: #f7f7f7;
+}
+.form-radio:checked
+{
+    background-color: #f1f1f1;
+}
+label
+{
+    cursor: pointer;
+}
+
+#editor {
+    height: 100%;
+    font-size: 12pt;
+}
+#glcanvas {
+    width:100%;
+    height: 100%;
+}
+.gutter {
+    background-color: #eee;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('grips/vertical.png');
+    cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+    background-image: url('grips/horizontal.png');
+    cursor: row-resize;
+}
+.gutter.gutter-vertical {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+.split {
+    box-sizing: border-box;
+}
+.split,
+.gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+}
+.split {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

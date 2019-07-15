@@ -1,0 +1,12 @@
+[package]
+name = "hyper-static"
+version = "0.1.0"
+authors = ["thenlevy <nicolaspierrelevy@gmail.com>", "pe@pijul.org <pierre-etienne.meunier@mu.ie>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/thenlevy/codenano"
+
+[dependencies]
+hyper = "*"
+httpdate = "*"
+mime_guess = "*"
+log = "*"
