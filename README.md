@@ -23,7 +23,7 @@ Designing Nanostructures
 You can copy and paste this code to generate a double cross-over
 
 
-    use design::*;
+    use codenano::*;
 
 
     pub fn main() {
@@ -81,7 +81,7 @@ nucleotides use the function
 
 &nbsp;
 
-    use design::*;
+    use codenano::*;
 
 
     pub fn main() {
@@ -123,7 +123,7 @@ following effect
 
 &nbsp;
 
-    use design::*;
+    use codenano::*;
 
     pub fn main() {
         let mut ori = Nanostructure::new();
@@ -147,7 +147,7 @@ Example
 ### Double cross-over
 
 
-    use design::*;
+    use codenano::*;
 
 
     pub fn main() {
@@ -174,7 +174,7 @@ Example
 ### single stranded tile
 
 
-    use design::*;
+    use codenano::*;
 
     const tile_length:isize = 11; 
 
@@ -233,7 +233,7 @@ why there is a major/minor groove). To change that you must create a
 constructor of the `Nanostructure` object.
 
 
-    use design::*;
+    use codenano::*;
 
 
     pub fn main() {
